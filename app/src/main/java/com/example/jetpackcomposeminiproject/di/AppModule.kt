@@ -1,13 +1,16 @@
 package com.example.jetpackcomposeminiproject.di
 
 import com.example.jetpackcomposeminiproject.data.api.ApiService
+import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-@dagger.Module
-@dagger.hilt.InstallIn(dagger.hilt.components.SingletonComponent::class)
+@Module
+@InstallIn(SingletonComponent::class)
 object AppModule {
     @Provides
     @Singleton
